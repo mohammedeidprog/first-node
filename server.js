@@ -15,7 +15,7 @@ const ApiError = require("./utils/apiError");
 // connect with database
 mongoose.set("strictQuery", false);
 
-mongoose.connect(process.env.DB_URI);
+// mongoose.connect(process.env.DB_URI);
 
 dbConnection();
 
