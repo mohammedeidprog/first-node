@@ -1,0 +1,15 @@
+{
+  "separators.enabledSymbols": [
+    "Classes",
+    "Enums",
+    "Interfaces",
+    "Methods",
+    "Namespaces",
+    "Structs"
+  ],
+  "[dart]": {
+    "editor.formatOnSave": true
+  },
+  "dart.devToolsTheme": "light",
+  "workbench.colorTheme": "GitHub Dark Default"
+}
