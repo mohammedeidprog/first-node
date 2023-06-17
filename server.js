@@ -3,6 +3,7 @@ const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
+const mongoose = require("mongoose");
 
 dotenv.config({ path: "config.env" });
 
@@ -12,6 +13,10 @@ const globalError = require("./middleware/errorMiddleware");
 const ApiError = require("./utils/apiError");
 
 // connect with database
+mongoose.set("strictQuery", false);
+
+mongoose.connect(process.env.DB_URI);
+
 dbConnection();
 
 // express app
