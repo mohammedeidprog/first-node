@@ -8,12 +8,7 @@ const dbConnection = () => {
     })
     .then((conn) => {
       console.log(`Database connected: ${conn.connection.host}`);
-    })
-    .catch(
-      Promise.reject(
-        new Error(`Database connection failed ${process.env.DB_URI}`)
-      )
-    );
+    });
 };
 
 module.exports = dbConnection;
