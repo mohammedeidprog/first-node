@@ -4,6 +4,8 @@ const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
+const cors = require("cors");
+const compression = require("compression");
 
 dotenv.config({ path: "config.env" });
 
@@ -21,6 +23,13 @@ dbConnection();
 
 // express app
 const app = express();
+
+// enable other domains to access your application
+app.use(cors());
+app.options("*", cors());
+
+// compress all responses
+app.use(compression());
 
 // middleware
 app.use(express.json());
