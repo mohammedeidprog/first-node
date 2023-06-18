@@ -15,7 +15,7 @@ const globalError = require("./middleware/errorMiddleware");
 const ApiError = require("./utils/apiError");
 
 // connect with database
-mongoose.set("strictQuery", false);
+// mongoose.set("strictQuery", false);
 
 // mongoose.connect(process.env.DB_URI);
 
